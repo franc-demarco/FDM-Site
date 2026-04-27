@@ -24,7 +24,7 @@ window.SITE_CONFIG = {
 
   /* ---------- HERO SECTION ---------- */
   hero: {
-    avatarUrl: 'https://picsum.photos/seed/profile/200/200',
+    avatarUrl: 'assets/FDM.jpg',
     avatarAlt: 'Portrait of Francesco De Marco',
     name: 'Francesco De Marco',
     subtitle: 'Software Engineer · iOS · FileMaker · Swift.',
