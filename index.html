@@ -612,6 +612,213 @@
     display: block;
   }
 
+  /* ============ EXPERIENCE / EDUCATION SECTIONS ============ */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .timeline-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .timeline-card:hover {
+    border-color: var(--text-subtle);
+    transform: translateY(-1px);
+  }
+
+  .timeline-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .timeline-title a {
+    color: var(--accent-blue);
+    text-decoration: none;
+  }
+
+  .timeline-title a:hover {
+    text-decoration: underline;
+  }
+
+  .timeline-period {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    background-color: var(--surface-2);
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .timeline-sub {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .timeline-sub a {
+    color: var(--accent-blue);
+    text-decoration: none;
+  }
+
+  .timeline-sub a:hover {
+    text-decoration: underline;
+  }
+
+  .timeline-bullets {
+    margin: 8px 0 0 0;
+    padding-left: 18px;
+    color: var(--text);
+  }
+
+  .timeline-bullets li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.55;
+  }
+
+  .timeline-bullets li::marker {
+    color: var(--accent-green);
+  }
+
+  .timeline-desc {
+    font-size: 14px;
+    color: var(--text);
+    margin-top: 4px;
+  }
+
+  /* ============ CERTIFICATES SECTION ============ */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .cert-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    transition: border-color 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+  }
+
+  .cert-card:hover {
+    border-color: var(--accent-yellow);
+    background-color: var(--surface-2);
+    transform: translateY(-2px);
+  }
+
+  .cert-badge {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: var(--radius-lg);
+    background-color: rgba(210, 153, 34, 0.10);
+    color: var(--accent-yellow);
+    border: 1px solid rgba(210, 153, 34, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .cert-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+    display: block;
+  }
+
+  .cert-badge svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cert-text {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cert-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .cert-issuer {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .cert-actions {
+    margin-top: auto;
+    padding-top: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: inherit;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .cert-link:hover {
+    background-color: var(--bg);
+    border-color: var(--accent-yellow);
+    color: var(--accent-yellow);
+  }
+
+  .cert-link[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
   /* ============ CONTACT SECTION ============ */
   .terminal-title {
     font-family: var(--font-mono);
@@ -908,6 +1115,9 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#about" class="nav-link" data-mobile-hide id="navAbout"></a>
       <a href="#projects" class="nav-link" id="navProjects"></a>
+      <a href="#experience" class="nav-link" data-mobile-hide id="navExperience"></a>
+      <a href="#education" class="nav-link" data-mobile-hide id="navEducation"></a>
+      <a href="#certificates" class="nav-link" data-mobile-hide id="navCertificates"></a>
       <a href="#contact" class="nav-link" id="navContact"></a>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" type="button">
         <svg class="icon-moon" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -972,6 +1182,42 @@
     <div class="pr-list" id="prList" role="list">
       <!-- PR rows injected by JS -->
     </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" aria-labelledby="experience-heading">
+    <div class="section-header reveal">
+      <svg width="22" height="22" viewBox="0 0 16 16" fill="var(--accent-blue)" aria-hidden="true">
+        <path d="M6.75 0h2.5C10.216 0 11 .784 11 1.75V3h3.25c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-8.5C0 3.784.784 3 1.75 3H5V1.75C5 .784 5.784 0 6.75 0Zm-5 4.5a.25.25 0 0 0-.25.25V8h13V4.75a.25.25 0 0 0-.25-.25H1.75ZM14.5 9.5h-13v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V9.5Zm-8-8a.25.25 0 0 0-.25.25V3h3.5V1.75a.25.25 0 0 0-.25-.25h-3Z"/>
+      </svg>
+      <h2 id="experience-heading"></h2>
+      <span class="count-badge" id="experienceCount"></span>
+    </div>
+    <div class="timeline reveal" id="experienceList"></div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" aria-labelledby="education-heading">
+    <div class="section-header reveal">
+      <svg width="22" height="22" viewBox="0 0 16 16" fill="var(--accent-purple)" aria-hidden="true">
+        <path d="M7.638.182a1.249 1.249 0 0 1 .724 0l7.25 2.13a.75.75 0 0 1 0 1.44L13 4.474v3.435a1.75 1.75 0 0 1-.704 1.404C11.276 10.084 9.871 11 8 11c-1.871 0-3.276-.916-4.296-1.687A1.75 1.75 0 0 1 3 7.91V4.474l-1.5-.44v3.471a.75.75 0 0 1-1.5 0V3.032a.75.75 0 0 1 .388-.72ZM4.5 4.914v2.994a.25.25 0 0 0 .101.2C5.5 8.788 6.661 9.5 8 9.5c1.34 0 2.5-.712 3.399-1.392a.25.25 0 0 0 .101-.2V4.914L8.362 5.818a1.249 1.249 0 0 1-.724 0L4.5 4.914ZM8 1.622 3.638 2.906 8 4.187l4.362-1.281L8 1.622ZM4.75 12a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75Z"/>
+      </svg>
+      <h2 id="education-heading"></h2>
+      <span class="count-badge" id="educationCount"></span>
+    </div>
+    <div class="timeline reveal" id="educationList"></div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section id="certificates" aria-labelledby="certificates-heading">
+    <div class="section-header reveal">
+      <svg width="22" height="22" viewBox="0 0 16 16" fill="var(--accent-yellow)" aria-hidden="true">
+        <path d="M7.775.495a.75.75 0 0 1 .45 0l6.5 2A.75.75 0 0 1 15 3.5c-.025 6.625-1.474 9.825-6.74 12.426-.083.04-.165.058-.249.063l-.011.001-.011-.001a.751.751 0 0 1-.249-.063C2.474 13.325 1.025 10.125 1 3.5a.75.75 0 0 1 .275-1.005ZM2.516 4.064C2.65 9.555 3.892 12.02 8 14.07c4.108-2.05 5.35-4.515 5.484-10.006L8 2.034 2.516 4.064Zm9.106 1.461a.75.75 0 0 1 0 1.06L7.53 10.677a.75.75 0 0 1-1.06 0L4.378 8.586a.75.75 0 1 1 1.06-1.06l1.561 1.56 3.563-3.561a.75.75 0 0 1 1.06 0Z"/>
+      </svg>
+      <h2 id="certificates-heading"></h2>
+      <span class="count-badge" id="certificatesCount"></span>
+    </div>
+    <div class="cert-grid reveal" id="certificatesList"></div>
   </section>
 
   <!-- ============ CONTACTS ============ -->
@@ -1061,6 +1307,9 @@
     setText('brandText', CFG.nav.brand);
     setText('navAbout', CFG.nav.links.about);
     setText('navProjects', CFG.nav.links.projects);
+    setText('navExperience', CFG.nav.links.experience);
+    setText('navEducation', CFG.nav.links.education);
+    setText('navCertificates', CFG.nav.links.certificates);
     setText('navContact', CFG.nav.links.contact);
   }
 
@@ -1224,6 +1473,107 @@
     });
   }
 
+  // ============ RENDER EXPERIENCE ============
+  function renderExperience() {
+    const heading = document.getElementById('experience-heading');
+    const list = document.getElementById('experienceList');
+    const counter = document.getElementById('experienceCount');
+    if (!CFG.experience || !list) return;
+
+    if (heading) heading.textContent = CFG.experience.sectionTitle;
+
+    const items = CFG.experience.items || [];
+    if (counter) counter.textContent = `${items.length} role${items.length === 1 ? '' : 's'}`;
+
+    list.innerHTML = items.map(it => {
+      const subParts = [];
+      if (it.location) subParts.push(escapeHtml(it.location));
+      if (it.companyUrl) subParts.push(`<a href="${escapeHtml(it.companyUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(it.companyUrl.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a>`);
+      if (it.linkedinUrl) subParts.push(`<a href="${escapeHtml(it.linkedinUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>`);
+
+      const bullets = (it.bullets || []).map(b => `<li>${escapeHtml(b)}</li>`).join('');
+
+      return `
+        <article class="timeline-card">
+          <div class="timeline-head">
+            <div class="timeline-title">${escapeHtml(it.role)} · <span style="color: var(--text-muted); font-weight: 500;">${escapeHtml(it.company)}</span></div>
+            <span class="timeline-period">${escapeHtml(it.period)}</span>
+          </div>
+          ${subParts.length ? `<div class="timeline-sub">${subParts.join('<span style="color: var(--text-subtle);">·</span>')}</div>` : ''}
+          ${bullets ? `<ul class="timeline-bullets">${bullets}</ul>` : ''}
+        </article>
+      `;
+    }).join('');
+  }
+
+  // ============ RENDER EDUCATION ============
+  function renderEducation() {
+    const heading = document.getElementById('education-heading');
+    const list = document.getElementById('educationList');
+    const counter = document.getElementById('educationCount');
+    if (!CFG.education || !list) return;
+
+    if (heading) heading.textContent = CFG.education.sectionTitle;
+
+    const items = CFG.education.items || [];
+    if (counter) counter.textContent = `${items.length} entr${items.length === 1 ? 'y' : 'ies'}`;
+
+    list.innerHTML = items.map(it => {
+      const subParts = [];
+      if (it.degree) subParts.push(escapeHtml(it.degree));
+      if (it.location) subParts.push(escapeHtml(it.location));
+
+      return `
+        <article class="timeline-card">
+          <div class="timeline-head">
+            <div class="timeline-title">${escapeHtml(it.institution)}</div>
+            <span class="timeline-period">${escapeHtml(it.period)}</span>
+          </div>
+          ${subParts.length ? `<div class="timeline-sub">${subParts.join('<span style="color: var(--text-subtle);">·</span>')}</div>` : ''}
+          ${it.description ? `<p class="timeline-desc">${escapeHtml(it.description)}</p>` : ''}
+        </article>
+      `;
+    }).join('');
+  }
+
+  // ============ RENDER CERTIFICATES ============
+  function renderCertificates() {
+    const heading = document.getElementById('certificates-heading');
+    const list = document.getElementById('certificatesList');
+    const counter = document.getElementById('certificatesCount');
+    if (!CFG.certificates || !list) return;
+
+    if (heading) heading.textContent = CFG.certificates.sectionTitle;
+
+    const items = CFG.certificates.items || [];
+    if (counter) counter.textContent = `${items.length} earned`;
+
+    const fallbackBadge = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M7.775.495a.75.75 0 0 1 .45 0l6.5 2A.75.75 0 0 1 15 3.5c-.025 6.625-1.474 9.825-6.74 12.426a.752.752 0 0 1-.521 0C2.474 13.325 1.025 10.125 1 3.5a.75.75 0 0 1 .275-1.005ZM2.516 4.064C2.65 9.555 3.892 12.02 8 14.07c4.108-2.05 5.35-4.515 5.484-10.006L8 2.034 2.516 4.064Z"/></svg>';
+    const externalIcon = '<svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg>';
+    const buttonText = CFG.certificates.viewButtonText || 'See certification';
+
+    list.innerHTML = items.map(it => {
+      const badge = it.badgeUrl
+        ? `<img src="${escapeHtml(it.badgeUrl)}" alt="${escapeHtml(it.name)} badge" loading="lazy">`
+        : fallbackBadge;
+
+      const action = it.url
+        ? `<a class="cert-link" href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(buttonText)}: ${escapeHtml(it.name)}">${externalIcon} ${escapeHtml(buttonText)}</a>`
+        : `<span class="cert-link" aria-disabled="true" title="No link provided">${externalIcon} ${escapeHtml(buttonText)}</span>`;
+
+      return `
+        <div class="cert-card" role="listitem">
+          <span class="cert-badge" aria-hidden="${it.badgeUrl ? 'false' : 'true'}">${badge}</span>
+          <span class="cert-text">
+            <span class="cert-name">${escapeHtml(it.name)}</span>
+            <span class="cert-issuer">${escapeHtml(it.issuer)}${it.year ? ' · ' + escapeHtml(it.year) : ''}</span>
+          </span>
+          <div class="cert-actions">${action}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
   // ============ THEME TOGGLE ============
   function setupThemeToggle() {
     const btn = document.getElementById('themeToggle');
@@ -1290,6 +1640,9 @@
     populateContact();
     populateFooter();
     renderProjects();
+    renderExperience();
+    renderEducation();
+    renderCertificates();
     setupThemeToggle();
     setupReveal();
     setupCVDownload();

@@ -8,8 +8,8 @@ window.SITE_CONFIG = {
 
   /* ---------- PAGE META ---------- */
   meta: {
-    title: 'Francesco De Marco — Developer Portfolio',
-    description: 'Personal developer portfolio — projects, experience, and contact information.'
+    title: 'Francesco De Marco — Software Engineer Portfolio',
+    description: 'Personal software engineer portfolio — projects, experience, and contact information.'
   },
 
   /* ---------- NAVIGATION ---------- */
@@ -18,6 +18,9 @@ window.SITE_CONFIG = {
     links: {
       about: 'about',
       projects: 'projects',
+      experience: 'experience',
+      education: 'education',
+      certificates: 'certificates',
       contact: 'contact'
     }
   },
@@ -67,6 +70,8 @@ window.SITE_CONFIG = {
         previewUrl: 'https://user-images.githubusercontent.com/129211821/235753747-12615a14-c8e9-4429-9874-55c55ad18a9d.png',
         links: { github: 'https://github.com/CoderlyStudio/FMProKit', demo: '#' }
       },
+
+      /*
       {
         number: 38,
         title: 'Itineris — Fleet Management Modules',
@@ -92,6 +97,99 @@ window.SITE_CONFIG = {
         date: 'merged on Jun 2023',
         previewSeed: 'campania',
         links: { github: '#', demo: '#' }
+      }
+      
+      */
+    ]
+  },
+
+  /* ---------- EXPERIENCE SECTION ---------- */
+  experience: {
+    sectionTitle: 'Experience',
+    items: [
+      {
+        company: 'Keeneight',
+        role: 'Software Engineer',
+        location: 'Naples, ITA',
+        period: 'Aug 2024 — Feb 2026',
+        companyUrl: 'https://keeneight.com',
+        linkedinUrl: 'https://www.linkedin.com/company/keeneight/',
+        bullets: [
+          'Client Requirements & Development: managed direct client communications to gather technical requirements, implementing tailored features in FileMaker for the Itineris software to deliver customized solutions and streamline workflows.',
+          'Critical Module Management: developed and maintained the core modules of the Itineris software, focusing on fleet management for automotive industry clients to ensure high reliability and operational efficiency.',
+          'API Integration & Data Synchronization: engineered API integrations connecting the proprietary Itineris software with external web services (e.g., Jira), enabling efficient data sync and eliminating inconsistencies across platforms.',
+          'Database Management: managed SQL databases within FileMaker, leveraging the MBS plugin to execute complex queries and maintain a robust data architecture.',
+          'Data Optimization & Visualization: optimized data retrieval by aggregating complex datasets into JSON, powering custom JavaScript scripts to render dynamic charts and statistical dashboards.'
+        ]
+      },
+      {
+        company: 'Apple Developer Academy — Pier Programme',
+        role: 'iOS Developer',
+        location: 'Naples, ITA',
+        period: 'Jul 2022 — Jun 2023',
+        companyUrl: 'https://developeracademy.unina.it',
+        linkedinUrl: '',
+        bullets: [
+          'iOS Architecture: spearheaded iOS development for a joint initiative with the Campania Region, defining and implementing a robust MVVM architecture to ensure a scalable and maintainable codebase.',
+          'Database & Backend Integration: designed a custom FileMaker database and established seamless, bi-directional communication with the iOS application leveraging the FMProKit Swift package.'
+        ]
+      }
+    ]
+  },
+
+  /* ---------- EDUCATION SECTION ---------- */
+  education: {
+    sectionTitle: 'Education',
+    items: [
+      {
+        institution: 'Università di Napoli Federico II',
+        degree: 'Bachelor of Science · Computer Science',
+        location: 'Naples, ITA',
+        period: 'Sep 2018 — Jul 2024',
+        description: 'Computer science fundamentals: algorithms and data structures, operating systems, databases, software engineering, and computer networks.'
+      },
+      {
+        institution: 'Apple Developer Academy',
+        degree: 'iOS Development Programme',
+        location: 'Naples, ITA',
+        period: 'Sep 2021 — Jun 2022',
+        description: 'iOS development with Swift / SwiftUI, cross-functional collaboration using Agile methodologies, with a strong business-oriented approach to product design.'
+      }
+    ]
+  },
+
+  /* ---------- CERTIFICATES SECTION ---------- */
+  certificates: {
+    sectionTitle: 'Certificates',
+    viewButtonText: 'See certification',
+    items: [
+      {
+        name: 'CCNA: Introduction to Networks',
+        issuer: 'Cisco',
+        year: '',
+        badgeUrl: 'assets/CCNAITN__1_.png',
+        url: 'https://www.credly.com/badges/7ff689e4-fad9-408b-986e-b0756aca0983'
+      },
+      {
+        name: 'Network Defense',
+        issuer: 'Cisco',
+        year: '',
+        badgeUrl: 'assets/NetworkDefense_v1_091721.png',
+        url: 'https://www.credly.com/badges/0ba3e6ec-f46e-4dd6-b5bc-64e6c91e8ba3'
+      },
+      {
+        name: 'Introduction to Cybersecurity',
+        issuer: 'Cisco',
+        year: '',
+        badgeUrl: 'assets/I2CS__1_.png',
+        url: 'https://www.credly.com/badges/23953573-553d-4f05-a881-9993dfde2b58'
+      },
+      {
+        name: 'Cyber Threat Management',
+        issuer: 'Cisco',
+        year: '',
+        badgeUrl: 'assets/CTM.png',
+        url: 'https://www.credly.com/badges/342ed71c-01f5-4378-b51d-68b69bca970a'
       }
     ]
   },
@@ -123,7 +221,7 @@ window.SITE_CONFIG = {
       },
       location: {
         label: 'Location',
-        value: 'Naples, Italy · Remote'
+        value: 'Pozzuoli, Naples, Italy'
       }
     },
     cv: {
@@ -138,7 +236,7 @@ window.SITE_CONFIG = {
   /* ---------- FOOTER ---------- */
   footer: {
     copyrightName: 'Francesco De Marco',
-    copyrightTagline: 'Built with care, no frameworks.',
+    copyrightTagline: 'Built with Claude Code prompting.',
     backToTopText: 'back to top',
     lastCommitPrefix: 'Last commit on'
   },
