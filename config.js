@@ -164,6 +164,13 @@ window.SITE_CONFIG = {
     viewButtonText: 'See certification',
     items: [
       {
+        name: 'Claude Code In Action',
+        issuer: 'Anthropic',
+        year: '',
+        badgeUrl: 'assets/Claude_InAction_Certificate.png',
+        url: 'https://verify.skilljar.com/c/czk7jj7qekfs'
+      },
+      {
         name: 'CCNA: Introduction to Networks',
         issuer: 'Cisco',
         year: '',
