@@ -236,7 +236,7 @@ window.SITE_CONFIG = {
       filename: 'Francesco De Marco - Software Engineer - CV.pdf',
       fileMeta: 'Francesco De Marco - Software Engineer - CV.pdf · ~101 KB',
       buttonText: 'Download CV',
-      url: 'assets/Francesco De Marco - Software Engineer - CV.pdf'
+      url: 'assets/Francesco De Marco - Resume.pdf'
     }
   },
 
